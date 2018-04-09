@@ -23,6 +23,19 @@ namespace XamlTestApp
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show("Размер сетки: " + MyGrid.ActualWidth + "x" + MyGrid.ActualHeight);
+        }
+
+        private void btn1Click(object sender, RoutedEventArgs e)
+        {
+            this.Cursor = Cursors.Help;
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(2));
+            txt1.Text = "Обычный текст...";
+        }
+
+        private void Btn1_GotFocus(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
